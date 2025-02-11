@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class LinearEquationResolver {
+    public static void main(String[] args) {
+        System.out.println("Nhap vao phuong trinh bac nhat ");
+        System.out.println("phuong trinh bac nhat a * x + b = 0");
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Nhap a: ");
+        double a = scanner.nextDouble();
+        System.out.print("Nhap b: ");
+        double b = scanner.nextDouble();
+        System.out.print("Nha c: ");
+        double c = scanner.nextDouble();
+        if (a != 0) {
+            double nghiem = (c - b) / a;
+            System.out.println("Nghiem cua pt bac nhat la:\n" + nghiem);
+        }else {
+            if (b==c){
+                System.out.println("pt vo so nghiem");
+            }else {
+                System.out.println("pt vo nghiem");
+            }
+        }
+    }
+}
