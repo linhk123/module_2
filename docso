@@ -1,0 +1,100 @@
+import java.util.Scanner;
+
+public class docso {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Nhap so muon doc: ");
+        int nhap = sc.nextInt();
+        if (nhap >= 0 && nhap < 10) {
+            switch (nhap){
+                case 0: System.out.println("khong"); break;
+                case 1: System.out.println("mot"); break;
+                case 2: System.out.println("hai"); break;
+                case 3: System.out.println("ba"); break;
+                case 4: System.out.println("bon"); break;
+                case 5: System.out.println("nam"); break;
+                case 6: System.out.println("sau"); break;
+                case 7: System.out.println("bay"); break;
+                case 8: System.out.println("tam"); break;
+                case 9: System.out.println("chin"); break;
+            }
+        }else if (nhap >= 10 && nhap < 20){
+            int du = nhap - 10;
+            switch (du){
+                case 0: System.out.println("muoi"); break;
+                case 1: System.out.println("muoi mot"); break;
+                case 2: System.out.println("muoi hai"); break;
+                case 3: System.out.println("muoi ba"); break;
+                case 4: System.out.println("muoi bon"); break;
+                case 5: System.out.println("muoi nam"); break;
+                case 6: System.out.println("muoi sau"); break;
+                case 7: System.out.println("muoi bay"); break;
+                case 8: System.out.println("muoi tam"); break;
+                case 9: System.out.println("muoi chin"); break;
+            }
+        }  else if (nhap >= 20 && nhap < 100){
+            int dv = nhap % 10;
+            int chuc = nhap / 10;
+            switch (chuc){
+                case 2: System.out.print("hai muoi "); break;
+                case 3: System.out.print("ba muoi "); break;
+                case 4: System.out.print("bon muoi "); break;
+                case 5: System.out.print("nam muoi "); break;
+                case 6: System.out.print("sau muoi "); break;
+                case 7: System.out.print("bay muoi "); break;
+                case 8: System.out.print("tam muoi "); break;
+                case 9: System.out.print("chin muoi "); break;
+            }
+            switch (dv){
+                case 0: System.out.print("muoi"); break;
+                case 1: System.out.print("mot"); break;
+                case 2: System.out.print("hai"); break;
+                case 3: System.out.print("ba"); break;
+                case 4: System.out.print("bon"); break;
+                case 5: System.out.print("nam"); break;
+                case 6: System.out.print("sau"); break;
+                case 7: System.out.print("bay"); break;
+                case 8: System.out.print("tam"); break;
+                case 9: System.out.print("chin"); break;
+            }
+        }else if (nhap >= 100 && nhap < 1000){
+            int tram = nhap / 100;
+            int dv = nhap % 10;
+            int chuc = nhap % 100 / 10;
+            switch (tram){
+                case 1: System.out.print("mot tram "); break;
+                case 2: System.out.print("hai tram "); break;
+                case 3: System.out.print("ba tram "); break;
+                case 4: System.out.print("bon tram "); break;
+                case 5: System.out.print("nam tram "); break;
+                case 6: System.out.print("sau tram "); break;
+                case 7: System.out.print("bay tram "); break;
+                case 8: System.out.print("tam tram "); break;
+                case 9: System.out.print("chin tram "); break;
+            }
+            switch (chuc){
+                case 1:System.out.print("muoi "); break;
+                case 2: System.out.print("hai muoi "); break;
+                case 3: System.out.print("ba muoi "); break;
+                case 4: System.out.print("bon muoi "); break;
+                case 5: System.out.print("nam muoi "); break;
+                case 6: System.out.print("sau muoi "); break;
+                case 7: System.out.print("bay muoi "); break;
+                case 8: System.out.print("tam muoi "); break;
+                case 9: System.out.print("chin muoi "); break;
+            }
+            switch (dv){
+                case 0: System.out.print("muoi"); break;
+                case 1: System.out.print("mot"); break;
+                case 2: System.out.print("hai"); break;
+                case 3: System.out.print("ba"); break;
+                case 4: System.out.print("bon"); break;
+                case 5: System.out.print("nam"); break;
+                case 6: System.out.print("sau"); break;
+                case 7: System.out.print("bay"); break;
+                case 8: System.out.print("tam"); break;
+                case 9: System.out.print("chin"); break;
+            }
+        }
+    }
+}
