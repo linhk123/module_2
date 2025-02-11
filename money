@@ -1,0 +1,11 @@
+import java.util.Scanner;
+
+public class money {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Nhap gia tri USD muon chuyen doi: ");
+        double usd = sc.nextDouble();
+        double VND = usd * 23000;
+        System.out.println("So tien ban co la:" + VND + "VND");
+    }
+}
