@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class Interest {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("so tien cho vay la: ");
+        int n = sc.nextInt();
+        System.out.print("lai suat theo thang: ");
+        float a = sc.nextFloat();
+        System.out.print("so thang cho vay la: ");
+        int b = sc.nextInt();
+        double lai =0;
+        for(int i=0; i<b; i++){
+            lai+=n*(a/100)/12 *b;
+        }
+        System.out.println("lai = "+lai);
+    }
+
+}
+
