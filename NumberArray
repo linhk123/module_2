@@ -1,0 +1,34 @@
+import java.util.Scanner;
+
+public class NumberArray {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int size;
+        int [] array;
+        do{
+            System.out.println("nhap tong so ty phu toi da cua ban: ");
+            size = sc.nextInt();
+            if(size > 20){
+                System.out.println("So luong nguoi qua lon: ");
+            }
+        }while(size > 20);
+        array = new int[size];
+        for(int i = 0; i < array.length; i++){
+            System.out.print("nhap tong so tai san cua ty phu thu "+ (i+1) +"la: ");
+            array[i] = sc.nextInt();
+        }
+        System.out.println("tai san cua cac ty phu lan luot la: ");
+        for(int i = 0; i < array.length; i++){
+            System.out.println(array[i]+"\t");
+        }
+        int MAX = array[0];
+        int t =1;
+        for(int i = 0; i < array.length; i++){
+            if (array[i] > MAX){
+                MAX = array[i];
+                t = i+1;
+            }
+        }
+        System.out.print("ty phu so "+t+" co tong tai san nhieu nhat voi tong tai san la: "+ MAX);
+    }
+}
