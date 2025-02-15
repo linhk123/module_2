@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class StudentArray {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("nhap vao ten sinh vien ban tim kiem: ");
+        String tenSinh = sc.nextLine();
+        String[] students = {"linh","hoang","vinh","tuan","nhung","co"};
+        boolean add = false;
+        for (int i = 0; i < students.length; i++) {
+            if (students[i].equals(tenSinh)) {
+                System.out.println(students[i]+" co trong danh sach sinh vien.");
+                add = true;
+                break;
+            }
+        }
+        if(add == false) {
+            System.out.println("ko ton tai ten "+tenSinh+" trong danh sach sinh vien.");
+        }
+
+    }
