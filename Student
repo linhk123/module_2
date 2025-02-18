@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class Student {
+    public static void main(String[] args) {
+        int size;
+        int[]arr;
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Nhap vao so luong sinh vien: ");
+        size = sc.nextInt();
+        do {
+            if (size>30){
+                System.out.print("Nhap so luong sinh vien qua tai ko the xu ly< yeu cau nhap lai: ");
+                size = sc.nextInt();
+            }
+        }while (size>30);
+        arr = new int[size];
+        System.out.print("Nhap vao diem cac sinh vien: ");
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = sc.nextInt();
+        }
+        int x=dem(arr);
+        System.out.print("so luong sinh vien dau la: " +x);
+    }
+    public static int dem(int[]arr){
+        int dem = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if(arr[i] > 5 && arr[i] <= 10){
+                dem++;
+            }
+        }
+        return dem;
+    }
+}
