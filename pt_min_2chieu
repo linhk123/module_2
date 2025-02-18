@@ -1,0 +1,48 @@
+import java.util.Scanner;
+
+public class pt_min_2chieu {
+    public static void main(String[] args) {
+        int[][] arr;
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Nhap so luong hang cua ma tran: ");
+        int x = sc.nextInt();
+        System.out.print("Nhap so luong cot cua ma tran: ");
+        int y = sc.nextInt();
+
+        arr = new int[x][y];
+
+        // Nhập giá trị cho ma trận
+        for (int i = 0; i < x; i++) {
+            for (int j = 0; j < y; j++) {
+                System.out.print("Nhap gia tri tai vi tri [" + i + "][" + j + "]: ");
+                arr[i][j] = sc.nextInt();
+            }
+        }
+
+        // In ma trận ra màn hình
+        System.out.println("Ma tran co dang:");
+        for (int i = 0; i < x; i++) {
+            for (int j = 0; j < y; j++) {
+                System.out.printf("%5d", arr[i][j]); // In số có định dạng đẹp
+            }
+            System.out.println();
+        }
+
+        // Tìm giá trị nhỏ nhất trong ma trận
+        int min = gtnn(arr);
+        System.out.println("Gia tri nho nhat trong ma tran la: " + min);
+    }
+
+    public static int gtnn(int[][] arr) {
+        int MIN = arr[0][0]; // Giả sử phần tử đầu tiên là nhỏ nhất
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[i].length; j++) { // Duyệt đúng số cột
+                if (arr[i][j] < MIN) {
+                    MIN = arr[i][j];
+                }
+            }
+        }
+        return MIN;
+    }
+}
