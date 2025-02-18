@@ -1,0 +1,48 @@
+import java.util.Scanner;
+
+public class pt_max_2chieu {
+    public static void main(String[] args) {
+        int[][] arr;
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.print("Nhap so luong hang cua ma tran: ");
+        int x = sc.nextInt();
+        System.out.print("Nhap so luong cot cua ma tran: ");
+        int y = sc.nextInt();
+        
+        arr = new int[x][y];
+
+        // Nhập giá trị cho ma trận
+        for (int i = 0; i < x; i++) {
+            for (int j = 0; j < y; j++) {
+                System.out.print("Nhap gia tri tai vi tri [" + i + "][" + j + "]: ");
+                arr[i][j] = sc.nextInt();
+            }
+        }
+
+        // In ma trận ra màn hình
+        System.out.println("Ma tran co dang: ");
+        for (int i = 0; i < x; i++) {
+            for (int j = 0; j < y; j++) {
+                System.out.print(arr[i][j] + "  ");
+            }
+            System.out.println();
+        }
+
+        // Tìm giá trị lớn nhất trong ma trận
+        int max = gtln(arr);
+        System.out.println("Gia tri lon nhat trong ma tran la: " + max);
+    }
+
+    public static int gtln(int[][] arr) {
+        int MAX = arr[0][0]; // Giả sử phần tử đầu tiên là lớn nhất
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[i].length; j++) { // Sửa lỗi duyệt cột
+                if (arr[i][j] > MAX) {
+                    MAX = arr[i][j];
+                }
+            }
+        }
+        return MAX;
+    }
+}
