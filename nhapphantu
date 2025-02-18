@@ -1,0 +1,52 @@
+import java.util.Scanner;
+
+public class nhapphantu {
+    public static void main(String[] args) {
+        int x, y;
+        int[][] arr;
+        Scanner sc = new Scanner(System.in);
+
+        // Nhập kích thước ma trận đúng thứ tự
+        System.out.print("Nhap so hang cua ma tran: ");
+        x = sc.nextInt();
+        System.out.print("Nhap so cot cua ma tran: ");
+        y = sc.nextInt();
+
+        arr = new int[x][y];
+
+        // Nhập giá trị cho ma trận
+        System.out.println("Nhap gia tri ma tran:");
+        for (int i = 0; i < x; i++) {
+            for (int j = 0; j < y; j++) {
+                System.out.print("arr[" + i + "][" + j + "] = ");
+                arr[i][j] = sc.nextInt();
+            }
+        }
+
+        // In ma trận ra màn hình
+        System.out.println("Ma tran:");
+        for (int i = 0; i < x; i++) {
+            for (int j = 0; j < y; j++) {
+                System.out.printf("%5d", arr[i][j]); // Hiển thị đẹp hơn
+            }
+            System.out.println();
+        }
+
+        // Nhập cột muốn tính tổng, có kiểm tra hợp lệ
+        System.out.print("Nhap cot muon tinh tong (0 - " + (y - 1) + "): ");
+        int n = sc.nextInt();
+        if (n < 0 || n >= y) {
+            System.out.println("Cot khong hop le! Vui long nhap lai.");
+            return;
+        }
+
+        // Tính tổng của cột n
+        int dem = 0;
+        for (int i = 0; i < x; i++) {
+            dem += arr[i][n];
+        }
+
+        // In kết quả
+        System.out.println("Tong cua cot " + n + " la: " + dem);
+    }
+}
