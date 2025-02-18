@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class dem_ki_tu {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Nhap vao chuoi ki tu: ");
+        String chuoi = sc.nextLine();
+        char[] arr= chuoi.toCharArray();
+        System.out.println("Nhap vao ki tu muon dem: ");
+        char n=sc.next().charAt(0);
+        int dem = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i]==n){
+               dem++;
+            }
+        }
+        System.out.println("Ky tu "+n+" xuat hien : "+dem+" lan");
+    }
+}
