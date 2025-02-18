@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class Rectangle_2 {
+    double width,height;
+    public Rectangle_2(){
+
+    }
+    public Rectangle_2(double width,double height){
+        this.width = width;
+        this.height = height;
+    }
+    public double getArea(){
+        return this.width * this.height;
+    }
+    public double getPerimeter(){
+        return this.width + this.height;
+    }
+    public String display(){
+        return "Rectangle{"+"width="+this.width+",height="+this.height+"}";
+    }
+        public static void main(String[] args){
+            Scanner sc = new Scanner(System.in);
+            System.out.println("Enter the width of the rectangle");
+            double w = sc.nextDouble();
+            System.out.println("Enter the height of the rectangle");
+            double h = sc.nextDouble();
+            Rectangle_2 rect = new Rectangle_2(w,h);
+            System.out.println("your rectangle\n"+rect.display());
+            System.out.println("your perimeter"+rect.getPerimeter());
+            System.out.println("your area"+rect.getArea());
+        }
+}
