@@ -1,0 +1,62 @@
+import java.util.Random;
+
+public class StopWatch {
+    private long startTime;
+    private long endTime;
+
+    // Constructor khởi tạo startTime với thời gian hiện tại
+    public StopWatch() {
+        this.startTime = System.currentTimeMillis();
+    }
+
+    // Phương thức start() để đặt lại startTime
+    public void start() {
+        this.startTime = System.currentTimeMillis();
+    }
+
+    // Phương thức stop() để đặt endTime
+    public void stop() {
+        this.endTime = System.currentTimeMillis();
+    }
+
+    // Trả về thời gian đã trôi qua (ms)
+    public long getElapsedTime() {
+        return endTime - startTime;
+    }
+
+    // Thuật toán sắp xếp chọn (Selection Sort)
+    public void selectionSort(int[] arr) {
+        int n = arr.length;
+        for (int i = 0; i < n - 1; i++) {
+            int minIndex = i;
+            for (int j = i + 1; j < n; j++) {
+                if (arr[j] < arr[minIndex]) {
+                    minIndex = j;
+                }
+            }
+            int temp = arr[minIndex];
+            arr[minIndex] = arr[i];
+            arr[i] = temp;
+        }
+    }
+
+    public static void main(String[] args) {
+        int size = 100000;
+        int[] arr = new int[size];
+
+        // Tạo mảng với số ngẫu nhiên
+        Random random = new Random();
+        for (int i = 0; i < size; i++) {
+            arr[i] = random.nextInt(100000); // Số ngẫu nhiên từ 0 đến 99999
+        }
+
+        StopWatch stopwatch = new StopWatch(); // Khởi tạo đối tượng StopWatch
+        stopwatch.start(); // Bắt đầu đo thời gian
+
+        stopwatch.selectionSort(arr); // Gọi thuật toán sắp xếp chọn
+
+        stopwatch.stop(); // Dừng đo thời gian
+
+        System.out.println("Thời gian thực thi của Selection Sort: " + stopwatch.getElapsedTime() + " ms");
+    }
+}
