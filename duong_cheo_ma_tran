@@ -1,0 +1,34 @@
+import java.util.Scanner;
+
+public class duong_cheo_ma_tran {
+    public static void main(String[] args) {
+        int size;
+        int[][]arr;
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Nhap ma tran vuong cap: ");
+        size = sc.nextInt();
+        arr = new int[size][size];
+        System.out.print("Nhap cac phan tu trong ma tran: ");
+        for (int i = 0; i < size; i++) {
+            for (int j = 0; j < size; j++) {
+                arr[i][j] = sc.nextInt();
+            }
+        }
+        System.out.print("Ma tran: ");
+        for (int i = 0; i < size; i++) {
+            for (int j = 0; j < size; j++) {
+                System.out.print(arr[i][j] + " ");
+            }
+            System.out.println();
+        }
+        int dem =0;
+        for (int i = 0; i < size; i++) {
+            for (int j = 0; j < size; j++) {
+                if (i==j) {
+                    dem+=arr[i][j];
+                }
+            }
+        }
+        System.out.println("Tong duong cheo chinh la: "+dem);
+    }
+}
