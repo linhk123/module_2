@@ -12,3 +12,23 @@ public class AbstractAndInterfaceTests {
         }
     }
 }
+package animal;
+
+
+public abstract class Animal {
+        public abstract String makeSound();
+}
+package animal;
+public class Chicken extends Animal{
+    @Override
+    public String makeSound(){
+        return "Chicken: cluck-cluck!";
+    }
+}
+package animal;
+public class Tiger extends Animal {
+    @Override
+    public String makeSound(){
+        return "Tiger: roarrrrrr!";
+    }
+}
